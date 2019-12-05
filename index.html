@@ -11,28 +11,47 @@
   <header>
     <h1> Women Perfume</h1>
 
-    <form>
-      <input type="text" name="find" id="itemName">
-    </form>
+    <div id="filterForm">
+      <form>
+        <input type="text" name="find" id="itemSearch">
+      </form>
 
-    <select name="sort" id="sortOrder" class="sort">
-      <option value="" disabled selected>-- Sort By--</option>
-      <option value="priceDesc">Price, Highest to Lowest</option>
-      <option value="priceAsc">Price, Lowest to Highest</option>
-      <option value="nameAsc">Name, A to Z</option>
-      <option value="nameDesc">Name, A to Z</option>
-    </select>
+      <select name="sort" id="sortOrder" class="sort">
+        <option value="" disabled selected>-- Sort By--</option>
+        <option value="priceDesc">Price, Highest to Lowest</option>
+        <option value="priceAsc">Price, Lowest to Highest</option>
+        <option value="nameAsc">Name, A to Z</option>
+        <option value="nameDesc">Name, A to Z</option>
+      </select>
 
-    <label id="sortSize">Size</label>
-    <input type="radio" id="size-regular" name="size"> Regular size perfume
-    <input type="radio" id="size-mini" name="size"> Mini size perfume
+      <div class="filterForm">
+        <form>
+          <label id="sortSize">Size</label> <br>
+          <input type="radio" id="size-regular" name="size"> Regular size perfume <br>
+          <input type="radio" id="size-mini" name="size"> Mini size perfume <br>
+        </form>
+        
 
-    <form>
-      <input type="checkbox" name="" id="">
-      <input type="checkbox">
-    </form>
+        <form>
+          <label>Brand</label> <br>
+          <input type="checkbox" name="KAT VON D" id="">KAT VON D <br>
+          <input type="checkbox" name="VIKTOR&ROLF" id="">VIKTOR&ROLF <br>
+          <input type="checkbox" name="YVES SAINT LAURENT" id="">YVES SAINT LAURENT <br>
+          <input type="checkbox" name="MAISON MARGIELA" id="">MAISON MARGIELA <br>
+          <input type="checkbox" name="JULIETTE HAS A GUN" id="">JULIETTE HAS A GUN <br>
+          <input type="checkbox" name="VERSACE" id="">VERSACE <br>
+          <input type="checkbox" name="MARC JACOBS FRAGRANCES" id="">MARC JACOBS FRAGRANCES <br>
+          <input type="checkbox" name="PHILOSOPHY" id="">PHILOSOPHY <br>
+          <input type="checkbox" name="JO MALONE LONDON" id="">JO MALONE LONDON <br>
+          <input type="checkbox" name="TOM FORD" id="">TOM FORD <br>
+          <input type="checkbox" name="MUGLER" id="">MUGLER <br>
+          <input type="checkbox" name="VALENTINO" id="">VALENTINO<br>
+        </form>
+        
+        <button id="search">Search</button>
+      </div>
+    </div>
 
-    <button id="search">Search</button>
   </header>
 
   <div id=items>

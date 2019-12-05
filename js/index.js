@@ -265,7 +265,7 @@ const addItemToCart = courseid => {
 // EVENT HANDLER FUNCTIONS **************
 const loadItemByName = event => {
 
-    const whatToSearch = document.getElementById('itemName').value;
+    const whatToSearch = document.getElementById('itemSearch').value;
     console.log(whatToSearch)
     const cleanVersion = whatToSearch.trim().toLowerCase();
   
@@ -339,7 +339,7 @@ const renderItemsFromArray = arr => {
 
 /************* EXECUTABLE *************/
 window.addEventListener('load', () => {
-    document.getElementById('itemName').addEventListener('input', loadItemByName);
+    document.getElementById('itemSearch').addEventListener('input', loadItemByName);
     document.getElementById('sortOrder').addEventListener('change', itemsByOrder);
     document.getElementById('size-regular').addEventListener('click', itemsBySize);
     document.getElementById('size-mini').addEventListener('click', itemsBySize);
