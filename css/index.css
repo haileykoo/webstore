@@ -6,10 +6,12 @@ body {
 }
 
 .grid {
+  margin: 2em 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 20px;
   align-items: stretch;
+  justify-content: center;
 }
 
 .grid > article {
@@ -40,4 +42,21 @@ body {
   font-weight: bold;
   color: #555;
   font-family: 'Courgette', cursive;
+}
+
+.btn {
+  height: 3em;
+  border: 1px #3F59A8 solid;
+  border-radius: 0.25em;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  background-color: #3F59A8;
+
+  color: white;
+  transition: all 0.9s, color 0.3;
+}
+
+.btn:hover {
+  color: rgb(41, 45, 56);
 }

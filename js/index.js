@@ -1,3 +1,8 @@
+/******* GLOABL VARIABLES/DATA ********/
+const shoppingCart = [
+    {itemsid:101, qty:1}
+];
+
 const items = [
     { //0
         id: 101,
@@ -9,7 +14,8 @@ const items = [
         category: `Eau de Parfum Spray`,
         scents: `Floral`,
         size: 100,
-        brand: `KAT VON D`
+        brand: `KAT VON D`,
+        review: 5
     }, { //1
         id: 102,
         name: `Flowerbomb`,
@@ -20,7 +26,8 @@ const items = [
         category: `Eau de Parfum Spray`,
         scents: `Spicy`,
         size: 100,
-        brand: `VIKTOR&ROLF`
+        brand: `VIKTOR&ROLF`,
+        review: 2
     }, { //2
         id: 103,
         name: `Black Opium`,
@@ -31,7 +38,8 @@ const items = [
         category: `Eau de Parfum Spray`,
         scents: `Spicy`,
         size: 90,
-        brand: `YVES SAINT LAURENT`
+        brand: `YVES SAINT LAURENT`,
+        review: 3.5
     }, { //3
         id: 104,
         name: `REPLICA’ By The Fireplace`,
@@ -42,7 +50,8 @@ const items = [
         category: `Eau de Parfum Spray`,
         scents: `Warm`,
         size: 100,
-        brand: `MAISON MARGIELA`
+        brand: `MAISON MARGIELA`,
+        review: 4.2
     }, { //4
         id: 105,
         name: `Not A Perfume`,
@@ -53,7 +62,8 @@ const items = [
         category: `Eau de Parfum Spray`,
         scents: `Woody`,
         size: 100,
-        brand: `JULIETTE HAS A GUN`
+        brand: `JULIETTE HAS A GUN`,
+        review: 4.9
     }, { //5
         id: 106,
         name: `Bright Crystal`,
@@ -64,7 +74,8 @@ const items = [
         category: `Eau de Toilette Spray`,
         scents: `Floral`,
         size: 90,
-        brand: `VERSACE`
+        brand: `VERSACE`,
+        review: 3.2
     }, { //6
         id: 107,
         name: `Daisy`,
@@ -75,7 +86,8 @@ const items = [
         category: `Eau de Toilette Spray`,
         scents: `Floral`,
         size: 50,
-        brand: `MARC JACOBS FRAGRANCES`
+        brand: `MARC JACOBS FRAGRANCES`,
+        review: 3.8
     }, { //8
         id: 109,
         name: `REPLICA’ By The Fireplace Travel Spray`,
@@ -86,7 +98,8 @@ const items = [
         category: `Eau de Toilette Travel Spray`,
         scents: `Warm`,
         size: 10,
-        brand: `MAISON MARGIELA`
+        brand: `MAISON MARGIELA`,
+        review: 2.2
     }, { //9
         id: 110,
         name: `REPLICA’ By The Fireplace Travel Spray`,
@@ -97,7 +110,8 @@ const items = [
         category: `Eau de Parfum Spray`,
         scents: `Earthy`,
         size: 50,
-        brand: `MARC JACOBS FRAGRANCES`
+        brand: `MARC JACOBS FRAGRANCES`,
+        review: 1
     }, { //10
         id: 111,
         name: `Amazing Grace Eau de Toilette`,
@@ -108,7 +122,8 @@ const items = [
         category: `Eau de Toilette Spray`,
         scents: `Floral`,
         size: 60,
-        brand: `PHILOSOPHY`
+        brand: `PHILOSOPHY`,
+        review: 4.4
     }, { //11
         id: 112,
         name: `Flowerbomb Nectar`,
@@ -119,7 +134,8 @@ const items = [
         category: `Eau de Parfum Spray`,
         scents: `Warm`,
         size: 50,
-        brand: `VIKTOR&ROLF`
+        brand: `VIKTOR&ROLF`,
+        review: 2.9
     }, { //12
         id: 113,
         name: `REPLICA Under the Lemon Trees Eau de Toilette`,
@@ -130,7 +146,8 @@ const items = [
         category: `Eau de Parfum Spray`,
         scents: `Fresh`,
         size: 100,
-        brand: `MAISON MARGIELA`
+        brand: `MAISON MARGIELA`,
+        review: 3
     }, { //13
         id: 114,
         name: `Amazing Grace Ballet Rose Eau de Toilette`,
@@ -141,7 +158,8 @@ const items = [
         category: `Eau de Toilette Spray`,
         scents: `Floral`,
         size: 60,
-        brand: `PHILOSOPHY`
+        brand: `PHILOSOPHY`,
+        review: 3.3
     }, { //14
         id: 115,
         name: `Blackberry & Bay Cologne`,
@@ -152,7 +170,8 @@ const items = [
         category: `Spray`,
         scents: `Fresh`,
         size: 100,
-        brand: `JO MALONE LONDON`
+        brand: `JO MALONE LONDON`,
+        review: 4.5
     }, { //15
         id: 116,
         name: `Red Roses Cologne`,
@@ -163,7 +182,8 @@ const items = [
         category: `Spray`,
         scents: `Floral`,
         size: 100,
-        brand: `JO MALONE LONDON`
+        brand: `JO MALONE LONDON`,
+        review: 1.8
     }, { //16
         id: 117,
         name: `Oud Wood Travel Spray`,
@@ -174,7 +194,8 @@ const items = [
         category: `Eau de Toilette Travel Spray`,
         scents: `Earthy`,
         size: 10,
-        brand: `TOM FORD`
+        brand: `TOM FORD`,
+        review: 4.1
     }, { //17
         id: 118,
         name: `Alien Travel Spray`,
@@ -185,7 +206,8 @@ const items = [
         category: `Eau de Toilette Travel Spray`,
         scents: `Floral`,
         size: 10,
-        brand: `MUGLER`
+        brand: `MUGLER`,
+        review: 3.2
     }, { //18
         id: 119,
         name: `Lost Cherry`,
@@ -196,7 +218,8 @@ const items = [
         category: `Eau de Parfum Spray`,
         scents: `Warm`,
         size: 100,
-        brand: `TOM FORD`
+        brand: `TOM FORD`,
+        review: 2.3
     }, { //19
         id: 120,
         name: `Vert d’Encens`,
@@ -207,7 +230,8 @@ const items = [
         category: `Eau de Parfum Decanter`,
         scents: `Spicy`,
         size: 250,
-        brand: `TOM FORD`
+        brand: `TOM FORD`,
+        review: 4.3
     }, { //20
         id: 121,
         name: `Donna Born In Roma Eau de Parfum`,
@@ -218,6 +242,72 @@ const items = [
         category: `Eau de Parfum Spray`,
         scents: `Floral`,
         size: 10,
-        brand: `VALENTINO`
+        brand: `VALENTINO`,
+        review: 3.1
     }
-]
+];
+
+
+/************* FUNCTIONS *************/
+const addItemToCart = courseid => {
+  
+    const cartItem = shoppingCart.find(item => item.courseid == courseid);
+  
+    if (cartItem) {  // if a cartItem was found
+      cartItem.qty++;
+    } else {
+      shoppingCart.push({courseid: courseid, qty: 1});
+    }
+}
+
+// EVENT HANDLER FUNCTIONS **************
+const itemsByOrder = event => {
+    console.log(event.target.value)
+  
+    let sorteditems;
+  
+    if (event.target.value == 'weeksAsc') {
+      // Smallest to largest
+      sorteditems = items.slice().sort((a, b) => a.price - b.price);
+    } else if (event.target.value == 'weeksDesc') {
+      // Largest to smallest
+      sorteditems = items.slice().sort((a, b) => b.price - a.price);
+    } else if (event.target.value == 'nameAsc') {
+      // Largest to smallest
+      sorteditems = items.slice().sort((a, b) => a.name.localeCompare(b.name));
+    } else if (event.target.value == 'nameDesc') {
+      // Largest to smallest
+      sorteditems = items.slice().sort((a, b) => b.name.localeCompare(a.name));
+    } else {
+        sorteditems = items.slice().sort((a, b) => b.name.localeCompare(a.name));
+    }
+    renderItemsFromArray(sorteditems);
+}
+
+// FUNCTIONS THAT BUILD OUR VIEW **************
+const getItemsAsHtmlString = items => {
+    return `
+    <div class="container">
+    <main class="grid">
+        <article>
+        <img src="${items.image}" alt="">
+        <div class="text">
+          <h3> ${items.name}</h3>
+          <p> ${items.description}</p>
+          <p> ${items.price}</p>
+          <a class="btn btn-primary btn-block">Add to cart</a>
+        </div>
+        </article>
+      </main>
+    </div> `;
+}
+
+const renderItemsFromArray = arr => {
+    document.getElementById('items').innerHTML = arr.map(getItemsAsHtmlString).join('\n');
+}
+
+/************* EXECUTABLE *************/
+window.addEventListener('load', () => {
+    document.getElementById('search').addEventListener('click', itemsByOrder);
+    renderItemsFromArray(items);
+});
