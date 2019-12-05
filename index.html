@@ -10,6 +10,28 @@
 <body>
   <header>
     <h1> Women Perfume</h1>
+
+    <form>
+      <input type="text" name="find" id="itemName">
+    </form>
+
+    <select name="sort" id="sortOrder" class="sort">
+      <option value="" disabled selected>-- Sort By--</option>
+      <option value="priceDesc">Price, Highest to Lowest</option>
+      <option value="priceAsc">Price, Lowest to Highest</option>
+      <option value="nameAsc">Name, A to Z</option>
+      <option value="nameDesc">Name, A to Z</option>
+    </select>
+
+    <label id="sortSize">Size</label>
+    <input type="radio" id="size-regular" name="size"> Regular size perfume
+    <input type="radio" id="size-mini" name="size"> Mini size perfume
+
+    <form>
+      <input type="checkbox" name="" id="">
+      <input type="checkbox">
+    </form>
+
     <button id="search">Search</button>
   </header>
 

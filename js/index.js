@@ -9,7 +9,7 @@ const items = [
         name: `Saint Eau de Parfum`,
         image: `https://www.sephora.com/productimages/sku/s1957216-main-zoom.jpg`,
         description: `Meet Saint—soft, alluring, and dreamy, this gourmand fragrance sweetens a bouquet of jasmine and tiaré flower with notes of mandarin, caramel, and sparkling Mirabelle plum.`,
-        price: `$69.00`,
+        price: `69.00`,
         quantity: 50,
         category: `Eau de Parfum Spray`,
         scents: `Floral`,
@@ -21,7 +21,7 @@ const items = [
         name: `Flowerbomb`,
         image: `https://www.sephora.com/productimages/sku/s1377159-main-zoom.jpg`,
         description: `Deep amber, woody, and patchouli notes combine with warm vanilla and praline notes to complete a truly addictive fragrance.`,
-        price: `$199.00`,
+        price: `199.00`,
         quantity: 30,
         category: `Eau de Parfum Spray`,
         scents: `Spicy`,
@@ -33,7 +33,7 @@ const items = [
         name: `Black Opium`,
         image: `https://www.sephora.com/productimages/sku/s1688852-main-zoom.jpg`,
         description: `Black Opium is the highly addictive feminine fragrance from Yves Saint Laurent.`,
-        price: `$162.00`,
+        price: `162.00`,
         quantity: 30,
         category: `Eau de Parfum Spray`,
         scents: `Spicy`,
@@ -45,7 +45,7 @@ const items = [
         name: `REPLICA’ By The Fireplace`,
         image: `https://www.sephora.com/productimages/sku/s1788058-main-zoom.jpg`,
         description: `These notes combine to make this Maison Margiela perfume the ultimate unisex cologne.`,
-        price: `$159.00`,
+        price: `159.00`,
         quantity: 10,
         category: `Eau de Parfum Spray`,
         scents: `Warm`,
@@ -57,7 +57,7 @@ const items = [
         name: `Not A Perfume`,
         image: `https://www.sephora.com/productimages/sku/s1703321-main-zoom.jpg`,
         description: `This minimalist, fresh, and clean fragrance is hypoallergenic and ideal for those who don’t normally wear perfume.`,
-        price: `$154.00`,
+        price: `154.00`,
         quantity: 50,
         category: `Eau de Parfum Spray`,
         scents: `Woody`,
@@ -69,7 +69,7 @@ const items = [
         name: `Bright Crystal`,
         image: `https://www.sephora.com/productimages/sku/s1063619-main-zoom.jpg`,
         description: `Bright Crystal is a fresh, sensual blend of refreshing chilled yuzu and pomegranate mingled with soothing blossoms of peony, magnolia, and lotus flower, warmed with notes of musk and amber.`,
-        price: `$126.00`,
+        price: `126.00`,
         quantity: 40,
         category: `Eau de Toilette Spray`,
         scents: `Floral`,
@@ -81,7 +81,7 @@ const items = [
         name: `Daisy`,
         image: `https://www.sephora.com/productimages/sku/s1029941-main-zoom.jpg`,
         description: `Charmingly simple with a signature quality, Daisy Marc Jacobs transports you to a place that’s optimistic, beautiful, and pure.`,
-        price: `$98.00`,
+        price: `98.00`,
         quantity: 20,
         category: `Eau de Toilette Spray`,
         scents: `Floral`,
@@ -93,7 +93,7 @@ const items = [
         name: `REPLICA’ By The Fireplace Travel Spray`,
         image: `https://www.sephora.com/productimages/sku/s2047629-main-zoom.jpg`,
         description: `By the Fireplace is a warm and spicy fragrance that evokes the comforting sensation of a crackling fireplace beside a frosted winter landscape with enveloping notes of clove, chestnut, and vanilla accord.`,
-        price: `$38.00`,
+        price: `38.00`,
         quantity: 33,
         category: `Eau de Toilette Travel Spray`,
         scents: `Warm`,
@@ -105,7 +105,7 @@ const items = [
         name: `REPLICA’ By The Fireplace Travel Spray`,
         image: `https://www.sephora.com/productimages/sku/s1838234-main-zoom.jpg`,
         description: `Dressed in a dazzling shade of emerald green, the crystalline flacon of Divine Decadence celebrates a new facet of Marc Jacobs' iconic handbag, the ultimate luxury accessory.`,
-        price: `$120.00`,
+        price: `120.00`,
         quantity: 30,
         category: `Eau de Parfum Spray`,
         scents: `Earthy`,
@@ -117,7 +117,7 @@ const items = [
         name: `Amazing Grace Eau de Toilette`,
         image: `https://www.sephora.com/productimages/sku/s607689-main-zoom.jpg`,
         description: `Embrace your beauty and express your femininity with Amazing Grace Eau de Toilette.`,
-        price: `$65.00`,
+        price: `65.00`,
         quantity: 100,
         category: `Eau de Toilette Spray`,
         scents: `Floral`,
@@ -129,7 +129,7 @@ const items = [
         name: `Flowerbomb Nectar`,
         image: `https://www.sephora.com/productimages/sku/s2042984-main-zoom.jpg`,
         description: `A sensual blend of bewitching flowers, flowerbomb nectar completes the flowerbomb collection. `,
-        price: `$156.00`,
+        price: `156.00`,
         quantity: 20,
         category: `Eau de Parfum Spray`,
         scents: `Warm`,
@@ -141,7 +141,7 @@ const items = [
         name: `REPLICA Under the Lemon Trees Eau de Toilette`,
         image: `https://www.sephora.com/productimages/sku/s2177996-main-zoom.jpg`,
         description: `This fragrance for women and men is a dreamy blend of kalamansi lime, green tea, citrus and soft musk perfumes.`,
-        price: `$159.00`,
+        price: `159.00`,
         quantity: 70,
         category: `Eau de Parfum Spray`,
         scents: `Fresh`,
@@ -153,7 +153,7 @@ const items = [
         name: `Amazing Grace Ballet Rose Eau de Toilette`,
         image: `https://www.sephora.com/productimages/sku/s2039006-main-zoom.jpg`,
         description: `Introducing Amazing Grace Ballet Rose, which is inspired by the delicate scent of pink rose petals opening at first bloom and the beautiful femininity of philosophy’s bestselling Amazing Grace fragrance.`,
-        price: `$65.00`,
+        price: `65.00`,
         quantity: 7,
         category: `Eau de Toilette Spray`,
         scents: `Floral`,
@@ -165,7 +165,7 @@ const items = [
         name: `Blackberry & Bay Cologne`,
         image: `https://www.sephora.com/productimages/sku/s1946706-main-zoom.jpg`,
         description: `This fragrance evokes childhood memories of blackberry picking—a burst of deep, tart blackberry juice blends with the freshness of just-gathered bay and brambly woods for a vibrant and verdant impression.`,
-        price: `$184.00`,
+        price: `184.00`,
         quantity: 20,
         category: `Spray`,
         scents: `Fresh`,
@@ -177,7 +177,7 @@ const items = [
         name: `Red Roses Cologne`,
         image: `https://www.sephora.com/productimages/sku/s2006021-main-zoom.jpg`,
         description: `Inspired by a voluptuous blend of seven of the world's most exquisite roses, this fragrance captures the essence of modern romance. `,
-        price: `$184.00`,
+        price: `184.00`,
         quantity: 90,
         category: `Spray`,
         scents: `Floral`,
@@ -189,7 +189,7 @@ const items = [
         name: `Oud Wood Travel Spray`,
         image: `https://www.sephora.com/productimages/sku/s2101350-main-zoom.jpg`,
         description: `Oud wood is one of the most rare, precious, and expensive ingredients in a perfumer’s arsenal.`,
-        price: `$75.00`,
+        price: `75.00`,
         quantity: 9,
         category: `Eau de Toilette Travel Spray`,
         scents: `Earthy`,
@@ -201,7 +201,7 @@ const items = [
         name: `Alien Travel Spray`,
         image: `https://www.sephora.com/productimages/sku/s2103190-main-zoom.jpg`,
         description: `Alien is a floral-woody-amber fragrance that borders the realms of spirituality and sensuality. It exudes a positive energy, charged with sensual and intriguing mystery.`,
-        price: `$39.00`,
+        price: `39.00`,
         quantity: 90,
         category: `Eau de Toilette Travel Spray`,
         scents: `Floral`,
@@ -213,7 +213,7 @@ const items = [
         name: `Lost Cherry`,
         image: `https://www.sephora.com/productimages/sku/s2251148-main-zoom.jpg`,
         description: `Black Cherry’s ripe flesh dripping in cherry liqueur glistens with a teasing touch of bitter almond.`,
-        price: `$535.00`,
+        price: `535.00`,
         quantity: 2,
         category: `Eau de Parfum Spray`,
         scents: `Warm`,
@@ -225,7 +225,7 @@ const items = [
         name: `Vert d’Encens`,
         image: `https://www.sephora.com/productimages/sku/s1855527-main-zoom.jpg`,
         description: `The unbridled nature of the Corsican Coast, known as "the perfumed isle", inspires this distinguished scent’s sophisticated, aromatic, and wild side.`,
-        price: `$725.00`,
+        price: `725.00`,
         quantity: 1,
         category: `Eau de Parfum Decanter`,
         scents: `Spicy`,
@@ -237,7 +237,7 @@ const items = [
         name: `Donna Born In Roma Eau de Parfum`,
         image: `https://www.sephora.com/productimages/sku/s2249712-main-zoom.jpg`,
         description: `The couture elegance is made of three qualities of jasmine which bring a luxurious femininity when blended with vanilla bourbon, the most expensive extract in the world.`,
-        price: `$39.00`,
+        price: `39.00`,
         quantity: 15,
         category: `Eau de Parfum Spray`,
         scents: `Floral`,
@@ -260,16 +260,28 @@ const addItemToCart = courseid => {
     }
 }
 
+
+
 // EVENT HANDLER FUNCTIONS **************
+const loadItemByName = event => {
+
+    const whatToSearch = document.getElementById('itemName').value;
+    console.log(whatToSearch)
+    const cleanVersion = whatToSearch.trim().toLowerCase();
+  
+    const resultsFromSearch = items.filter(c => c.name.toLowerCase().includes(cleanVersion) || c.brand.toLowerCase().includes(cleanVersion));
+    renderItemsFromArray(resultsFromSearch);
+  }
+
 const itemsByOrder = event => {
     console.log(event.target.value)
   
     let sorteditems;
   
-    if (event.target.value == 'weeksAsc') {
+    if (event.target.value == 'priceAsc') {
       // Smallest to largest
       sorteditems = items.slice().sort((a, b) => a.price - b.price);
-    } else if (event.target.value == 'weeksDesc') {
+    } else if (event.target.value == 'priceDesc') {
       // Largest to smallest
       sorteditems = items.slice().sort((a, b) => b.price - a.price);
     } else if (event.target.value == 'nameAsc') {
@@ -279,9 +291,25 @@ const itemsByOrder = event => {
       // Largest to smallest
       sorteditems = items.slice().sort((a, b) => b.name.localeCompare(a.name));
     } else {
-        sorteditems = items.slice().sort((a, b) => b.name.localeCompare(a.name));
+      return;
     }
     renderItemsFromArray(sorteditems);
+}
+
+const itemsBySize = event => {
+  
+    let itemsSize;
+  
+    if (document.getElementById("size-regular").checked) {
+        // items > 20ml
+        itemsSize = items.filter(items => items.size>20);
+    } else if (document.getElementById("size-mini").checked) {
+        // items < 20ml
+        itemsSize = items.filter(items => items.size<20);
+    } else {
+        return;
+    }
+    renderItemsFromArray(itemsSize);
 }
 
 // FUNCTIONS THAT BUILD OUR VIEW **************
@@ -293,8 +321,11 @@ const getItemsAsHtmlString = items => {
         <img src="${items.image}" alt="">
         <div class="text">
           <h3> ${items.name}</h3>
+          <p> ${items.brand}</p>
           <p> ${items.description}</p>
-          <p> ${items.price}</p>
+          <p> ${items.size} ml</p>
+          <p> ${items.category}</p>
+          <p> $${items.price}</p>
           <a class="btn btn-primary btn-block">Add to cart</a>
         </div>
         </article>
@@ -308,6 +339,9 @@ const renderItemsFromArray = arr => {
 
 /************* EXECUTABLE *************/
 window.addEventListener('load', () => {
-    document.getElementById('search').addEventListener('click', itemsByOrder);
+    document.getElementById('itemName').addEventListener('input', loadItemByName);
+    document.getElementById('sortOrder').addEventListener('change', itemsByOrder);
+    document.getElementById('size-regular').addEventListener('click', itemsBySize);
+    document.getElementById('size-mini').addEventListener('click', itemsBySize);
     renderItemsFromArray(items);
 });

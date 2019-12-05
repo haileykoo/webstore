@@ -45,16 +45,17 @@ body {
 }
 
 .btn {
-  height: 3em;
-  border: 1px #3F59A8 solid;
-  border-radius: 0.25em;
-  overflow: hidden;
-  text-align: center;
+  border: 1px solid #722A1B;
+  padding: 4px 14px;
+  background-color: #fff;
+  color: #722A1B;
+  text-transform: case;
+  float: center;
+  margin: 5px 0;
+  font-weight: bold;
+  font-size: 0.9rem;
   cursor: pointer;
-  background-color: #3F59A8;
-
-  color: white;
-  transition: all 0.9s, color 0.3;
+  font-family: 'Courgette', cursive;
 }
 
 .btn:hover {
