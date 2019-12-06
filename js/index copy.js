@@ -22,7 +22,7 @@ const items = [
         image: `https://www.sephora.com/productimages/sku/s1377159-main-zoom.jpg`,
         description: `Deep amber, woody, and patchouli notes combine with warm vanilla and praline notes to complete a truly addictive fragrance.`,
         price: `199.00`,
-        quantity: 0,
+        quantity: 30,
         category: `Eau de Parfum Spray`,
         scents: `Spicy`,
         size: 100,
@@ -249,6 +249,7 @@ const items = [
 
 
 /************* FUNCTIONS *************/
+// Shopping cart
 const addItemToCart = courseid => {
   
     const cartItem = shoppingCart.find(item => item.courseid == courseid);
@@ -260,10 +261,8 @@ const addItemToCart = courseid => {
     }
 }
 
-
-
-// EVENT HANDLER FUNCTIONS **************
-const loadItemByNameandBrand = event => {
+// Search by name and brand
+const loadItemByName = event => {
 
     const whatToSearch = document.getElementById('itemSearch').value;
     console.log(whatToSearch)
@@ -273,35 +272,41 @@ const loadItemByNameandBrand = event => {
     renderItemsFromArray(resultsFromSearch);
   }
 
-const itemsByOrder = event => {
-    console.log(event.target.value)
-  
-    let sorteditems;
+// Sorting order function
+const itemsByOrder = (arrToSort, criteria) => {
+
+    const sorteditems = arrToSort.slice(); // clone the array
   
     if (event.target.value == 'priceAsc') {
-        // Smallest to largest
-        sorteditems = items.slice().sort((a, b) => a.price - b.price);
+      // Smallest to largest
+      sorteditems = items.slice().sort((a, b) => a.price - b.price);
     } else if (event.target.value == 'priceDesc') {
-        // Largest to smallest
-        sorteditems = items.slice().sort((a, b) => b.price - a.price);
+      // Largest to smallest
+      sorteditems = items.slice().sort((a, b) => b.price - a.price);
     } else if (event.target.value == 'nameAsc') {
-        // Largest to smallest
-        sorteditems = items.slice().sort((a, b) => a.name.localeCompare(b.name));
+      // Largest to smallest
+      sorteditems = items.slice().sort((a, b) => a.name.localeCompare(b.name));
     } else if (event.target.value == 'nameDesc') {
-        // Largest to smallest
-        sorteditems = items.slice().sort((a, b) => b.name.localeCompare(a.name));
-    } else if (event.target.value == 'bestSelling') {
-        // Best Sellings
-        sorteditems = items.slice().sort((a, b) => a.price - b.price);
-    } else if (event.target.value == 'topRated') {
-        // Highest customer reviews
-        sorteditems = items.slice().sort((a, b) => a.review - b.review);
-    }else {
+      // Largest to smallest
+      sorteditems = items.slice().sort((a, b) => b.name.localeCompare(a.name));
+    } else {
       return;
     }
-    renderItemsFromArray(sorteditems);
+    return sorteditems; // new array
 }
 
+// Filter
+const runTheFilter = e => {
+    const categoryToSearch = document.getElementById("categoryName").value;
+
+    // Filter all courses in multiple
+    const filteredItems = items
+    .filter(i => i.category == categoryToSearch || categoryToSearch == "all")   // filter by category
+
+    renderItemsFromArray(filteredItems);
+}
+
+// EVENT HANDLER FUNCTIONS **************
 const itemsBySize = event => {
   
     let itemsSize;
@@ -318,81 +323,32 @@ const itemsBySize = event => {
     renderItemsFromArray(itemsSize);
 }
 
-
-const itemsByBrand = event => {
-    let itemsByBrand;
+// When the filter form itself is submit...
+const filterTheCourses = event => {
+    event.preventDefault(); // Prevent the submit form refreshing
+    runTheFilter(event.target);
+  }
   
-    if (document.getElementById("kat").checked) {
-        itemsByBrand = items.filter(items => items.brand == `KAT VON D`);
-    } else if (document.getElementById("vik").checked) {
-        itemsByBrand = items.filter(items => items.brand == `VIKTOR&ROLF`);
-    } else if (document.getElementById("yve").checked) {
-        itemsByBrand = items.filter(items => items.brand == `YVES SAINT LAURENT`);
-    } else if (document.getElementById("mai").checked) {
-        itemsByBrand = items.filter(items => items.brand == `MAISON MARGIELA`);
-    } else if (document.getElementById("jul").checked) {
-        itemsByBrand = items.filter(items => items.brand == `JULIETTE HAS A GUN`);
-    } else if (document.getElementById("ver").checked) {
-        itemsByBrand = items.filter(items => items.brand == `VERSACE`);
-    } else if (document.getElementById("mar").checked) {
-        itemsByBrand = items.filter(items => items.brand == `MARC JACOBS FRAGRANCES`);
-    } else if (document.getElementById("phi").checked) {
-        itemsByBrand = items.filter(items => items.brand == `PHILOSOPHY`);
-    } else if (document.getElementById("jo").checked) {
-        itemsByBrand = items.filter(items => items.brand == `JO MALONE LONDON`);
-    } else if (document.getElementById("tom").checked) {
-        itemsByBrand = items.filter(items => items.brand == `TOM FORD`);
-    } else if (document.getElementById("mug").checked) {
-        itemsByBrand = items.filter(items => items.brand == `MUGLER`);
-    } else if (document.getElementById("val").checked) {
-        itemsByBrand = items.filter(items => items.brand == `VALENTINO`);
-    } else {
-      return;
-    }
-    renderItemsFromArray(itemsByBrand);
+// When a filter form component is submit...
+const submitTheFilterForm = event => {
+//document.getElementById('filtersForm').submit();
+runTheFilter(event.target.form);
 }
 
-const itemsByScent = event => {
-    let itemsByScent;
-  
-    if (document.getElementById("floral").checked) {
-        itemsByscent = items.filter(items => items.scents == `Floral`);
-    } else if (document.getElementById("spicy").checked) {
-        itemsByscent = items.filter(items => items.scents == `Spicy`);
-    } else if (document.getElementById("warm").checked) {
-        itemsByscent = items.filter(items => items.scents == `Warm`);
-    } else if (document.getElementById("woody").checked) {
-        itemsByscent = items.filter(items => items.scents == `Woody`);
-    } else if (document.getElementById("earthy").checked) {
-        itemsByscent = items.filter(items => items.scents == `Earthy`);
-    } else if (document.getElementById("fresh").checked) {
-        itemsByscent = items.filter(items => items.scents == `Fresh`);
-    } else {
-      return;
-    }
-    renderItemsFromArray(itemsByScent);
+// When sorting, ensure the filters run first (which leads to a render)
+const sortTheCourses = event => {
+runTheFilter(document.getElementById('filtersForm'));
 }
 
 // FUNCTIONS THAT BUILD OUR VIEW **************
 const getItemsAsHtmlString = items => {
-    let callout = ``;
-    let soldout = ``;
-    if (items.quantity <= 0) {
-      callout = ``;
-      soldout = `soldout`;
-      register = ``;
-    } else if (items.quantity < 50 && items.quantity >0) {
-      callout = `<small class="callout urgent">Limited Stock</small>`;
-    }
-
     return `
     <div class="container">
     <main class="grid">
         <article>
         <img src="${items.image}" alt="">
         <div class="text">
-          <h3> ${items.name} </h3> 
-          <p> ${soldout} ${callout} </p>
+          <h3> ${items.name}</h3>
           <p> ${items.brand}</p>
           <p> ${items.description}</p>
           <p> ${items.size} ml</p>
@@ -406,21 +362,26 @@ const getItemsAsHtmlString = items => {
 }
 
 const renderItemsFromArray = arr => {
+    const sortBy = document.getElementById('sortOrder').value;    
+    arr = loadCoursesByOrder(arr, sortBy);  // sort the courses, reassign the new Array
     if (arr.length > 0) {
-        document.getElementById('items').innerHTML = arr.map(getItemsAsHtmlString).join('\n');
-    } else {
-        document.getElementById('items').innerHTML = 'Sorry, no matching results.'
-    }
-    document.getElementById('numResults').innerHTML = `(${arr.length} ${(arr.length == 1) ? 'result' : 'results'})`; // Display number of total results
+        document.getElementById('courses').innerHTML = arr.map(getCourseAsHtmlString).join('\n'); // Print courses  
+      } else {
+        document.getElementById('courses').innerHTML = 'Sorry, no matching results.' // Woops!
+      }
+    
+      document.getElementById('numResults').innerHTML = `(${arr.length} ${(arr.length == 1) ? 'result' : 'results'})`; // Display number of total results
 }
 
 /************* EXECUTABLE *************/
 window.addEventListener('load', () => {
-    document.getElementById('itemSearch').addEventListener('input', loadItemByNameandBrand);
+    document.getElementById('itemSearch').addEventListener('input', loadItemByName);
     document.getElementById('sortOrder').addEventListener('change', itemsByOrder);
     document.getElementById('size-regular').addEventListener('click', itemsBySize);
     document.getElementById('size-mini').addEventListener('click', itemsBySize);
-    document.getElementById('brand').addEventListener('click', itemsByBrand);
-    // document.getElementById('scents').addEventListener('click', itemsByScent);
+
+    document.getElementById('filtersForm').addEventListener('submit', filterTheCourses);
+    document.getElementById('categoryName').addEventListener('change', submitTheFilterForm);
+
     renderItemsFromArray(items);
 });

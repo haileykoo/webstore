@@ -7,19 +7,34 @@
   <title>Perfume for women</title>
   <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
   <header>
-    <h1> Women Perfume</h1>
+    <h1> Beautify.me</h1>
+    <h2> Women Perfume <small id="numResults">(5 results)</small></h2>
 
-    <div id="filterForm">
+    <div id="filtersForm">
       <form>
         <input type="text" name="find" id="itemSearch">
       </form>
 
+      <label for="categoryName">Category:
+        <select name="categoryName" id="categoryName">
+          <option value="all" selected>All Products</option>
+          <option value="toilette">Eau de Toilette Spray</option>
+          <option value="toilette-travel">Eau de Toilette Travel Spray</option>
+          <option value="spray">Spray</option>
+          <option value="perfum">Eau de Parfum Spray</option>
+          <option value="decanter">Eau de Parfum Decanter</option>
+        </select>
+      </label>
+
       <select name="sort" id="sortOrder" class="sort">
         <option value="" disabled selected>-- Sort By--</option>
-        <option value="priceDesc">Price, Highest to Lowest</option>
-        <option value="priceAsc">Price, Lowest to Highest</option>
+        <option value="bestSelling">Best Selling</option>
+        <option value="highRated">High Rated</option>
+        <option value="priceDesc">Price High to Low</option>
+        <option value="priceAsc">Price Low to High</option>
         <option value="nameAsc">Name, A to Z</option>
         <option value="nameDesc">Name, A to Z</option>
       </select>
@@ -31,23 +46,32 @@
           <input type="radio" id="size-mini" name="size"> Mini size perfume <br>
         </form>
         
-        <form>
+        <form id="brand">
           <label>Brand</label> <br>
-          <input type="checkbox" name="KAT VON D" id="">KAT VON D <br>
-          <input type="checkbox" name="VIKTOR&ROLF" id="">VIKTOR&ROLF <br>
-          <input type="checkbox" name="YVES SAINT LAURENT" id="">YVES SAINT LAURENT <br>
-          <input type="checkbox" name="MAISON MARGIELA" id="">MAISON MARGIELA <br>
-          <input type="checkbox" name="JULIETTE HAS A GUN" id="">JULIETTE HAS A GUN <br>
-          <input type="checkbox" name="VERSACE" id="">VERSACE <br>
-          <input type="checkbox" name="MARC JACOBS FRAGRANCES" id="">MARC JACOBS FRAGRANCES <br>
-          <input type="checkbox" name="PHILOSOPHY" id="">PHILOSOPHY <br>
-          <input type="checkbox" name="JO MALONE LONDON" id="">JO MALONE LONDON <br>
-          <input type="checkbox" name="TOM FORD" id="">TOM FORD <br>
-          <input type="checkbox" name="MUGLER" id="">MUGLER <br>
-          <input type="checkbox" name="VALENTINO" id="">VALENTINO<br>
+          <input type="radio" name="brand" id="kat">KAT VON D <br>
+          <input type="radio" name="brand" id="vik">VIKTOR&ROLF <br>
+          <input type="radio" name="brand" id="yve">YVES SAINT LAURENT <br>
+          <input type="radio" name="brand" id="mai">MAISON MARGIELA <br>
+          <input type="radio" name="brand" id="jul">JULIETTE HAS A GUN <br>
+          <input type="radio" name="brand" id="ver">VERSACE <br>
+          <input type="radio" name="brand" id="mar">MARC JACOBS FRAGRANCES <br>
+          <input type="radio" name="brand" id="phi">PHILOSOPHY <br>
+          <input type="radio" name="brand" id="jo">JO MALONE LONDON <br>
+          <input type="radio" name="brand" id="tom">TOM FORD <br>
+          <input type="radio" name="brand" id="mug">MUGLER <br>
+          <input type="radio" name="brand" id="val">VALENTINO<br>
         </form>
 
-        <button id="search">Search</button>
+        <form id="scents">
+          <label>Scents</label> <br>
+          <input type="radio" name="scent" id="floral">Floral <br>
+          <input type="radio" name="scent" id="spicy">Spicy <br>
+          <input type="radio" name="scent" id="warm">Warm <br>
+          <input type="radio" name="scent" id="woody">Woody <br>
+          <input type="radio" name="scent" id="earthy">Earthy <br>
+          <input type="radio" name="scent" id="fresh">Fresh <br>
+        </form>
+
       </div>
     </div>
 
