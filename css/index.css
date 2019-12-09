@@ -1,7 +1,75 @@
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
 
-body {
+html,body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+  background-color: #D1525D;
+}
+
+.topnav {
+  margin: 0;
+  padding: 0;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #f2f2f2;
+  color: #D0222B;
+}
+
+.topnav a.active {
+  background-color: #C7161C;
+  color: white;
+}
+
+.banner {
+  background: url(/img/banner1.jpg) no-repeat center center fixed; 
+  background-size: cover; 
+  height: 100%;
+  width: 100%;
+  height:100vh;    
+}
+
+h1 {
+  color: white;
+  font-size: 5em;
+  display: inline-block;
+}
+
+.searchbox {
+  margin-top: 1em;
+  text-align: center;
+}
+
+input[type=text] {
+  width: 20em;
+  box-sizing: border-box;
+  border: 2px solid #D1525D;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
 }
 
 .grid {
@@ -30,6 +98,7 @@ body {
 .grid .text h3 {
   font-size: 1.4rem;
   font-family: 'Fredoka One', cursive;
+  color: #C7161C;
 }
 
 .grid .text p {
@@ -80,4 +149,124 @@ form {
 
 .btn:hover {
   color: rgb(41, 45, 56);
+}
+
+.brand-menu {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.kvd {
+    content: url('../img/logo/Brand/KBD.png');
+    /* width: 70%;
+    height: 70%; */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.vr {
+  content: url('../img/logo/Brand/VR.png');
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.ysl {
+  content: url('../img/logo/Brand/YSL.png');
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.mm {
+  content: url('../img/logo/Brand/MM.png');
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.jhag {
+  content: url('../img/logo/Brand/jhag.png');
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.versace {
+  content: url('../img/logo/Brand/versace.png');
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.mj {
+  content: url('../img/logo/Brand/mj.png');
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.philosophy {
+  content: url('../img/logo/Brand/PHILOSOPHY.png');
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.jml {
+  content: url('../img/logo/Brand/jml.png');
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.tf {
+    content: url('../img/logo/Brand/TF.png');
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.mugler {
+  content: url('../img/logo/Brand/mugler.png');
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.valentino {
+  content: url('../img/logo/Brand/VALENTINO.png');
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.earthy {
+  content: url('../img/logo/Scents/earth-1.png');
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .brands {
+    width: 70%;
+    height: 70%;
+  }
 }

@@ -304,73 +304,76 @@ const itemsByOrder = event => {
 
 const itemsBySize = event => {
   
-    let itemsSize;
+    let size;
   
     if (document.getElementById("size-regular").checked) {
         // items > 20ml
-        itemsSize = items.filter(items => items.size>20);
+        size = items.filter(items => items.size>20);
     } else if (document.getElementById("size-mini").checked) {
         // items < 20ml
-        itemsSize = items.filter(items => items.size<20);
+        size = items.filter(items => items.size<20);
     } else {
         return;
     }
-    renderItemsFromArray(itemsSize);
+    renderItemsFromArray(size);
 }
 
 
 const itemsByBrand = event => {
-    let itemsByBrand;
+    let brands;
   
     if (document.getElementById("kat").checked) {
-        itemsByBrand = items.filter(items => items.brand == `KAT VON D`);
+        brands = items.filter(items => items.brand == `KAT VON D`);
     } else if (document.getElementById("vik").checked) {
-        itemsByBrand = items.filter(items => items.brand == `VIKTOR&ROLF`);
+        brands = items.filter(items => items.brand == `VIKTOR&ROLF`);
     } else if (document.getElementById("yve").checked) {
-        itemsByBrand = items.filter(items => items.brand == `YVES SAINT LAURENT`);
+        brands = items.filter(items => items.brand == `YVES SAINT LAURENT`);
     } else if (document.getElementById("mai").checked) {
-        itemsByBrand = items.filter(items => items.brand == `MAISON MARGIELA`);
+        brands = items.filter(items => items.brand == `MAISON MARGIELA`);
     } else if (document.getElementById("jul").checked) {
-        itemsByBrand = items.filter(items => items.brand == `JULIETTE HAS A GUN`);
+        brands = items.filter(items => items.brand == `JULIETTE HAS A GUN`);
     } else if (document.getElementById("ver").checked) {
-        itemsByBrand = items.filter(items => items.brand == `VERSACE`);
+        brands = items.filter(items => items.brand == `VERSACE`);
     } else if (document.getElementById("mar").checked) {
-        itemsByBrand = items.filter(items => items.brand == `MARC JACOBS FRAGRANCES`);
+        brands = items.filter(items => items.brand == `MARC JACOBS FRAGRANCES`);
     } else if (document.getElementById("phi").checked) {
-        itemsByBrand = items.filter(items => items.brand == `PHILOSOPHY`);
+        brands = items.filter(items => items.brand == `PHILOSOPHY`);
     } else if (document.getElementById("jo").checked) {
-        itemsByBrand = items.filter(items => items.brand == `JO MALONE LONDON`);
+        brands = items.filter(items => items.brand == `JO MALONE LONDON`);
     } else if (document.getElementById("tom").checked) {
-        itemsByBrand = items.filter(items => items.brand == `TOM FORD`);
+        brands = items.filter(items => items.brand == `TOM FORD`);
     } else if (document.getElementById("mug").checked) {
-        itemsByBrand = items.filter(items => items.brand == `MUGLER`);
+        brands = items.filter(items => items.brand == `MUGLER`);
     } else if (document.getElementById("val").checked) {
-        itemsByBrand = items.filter(items => items.brand == `VALENTINO`);
+        brands = items.filter(items => items.brand == `VALENTINO`);
     } else {
       return;
     }
-    renderItemsFromArray(itemsByBrand);
+    renderItemsFromArray(brands);
 }
 
 const itemsByScent = event => {
-    let itemsByScent;
+    debugger;
+    console.log('clicked')
+    let scents;
   
     if (document.getElementById("floral").checked) {
-        itemsByscent = items.filter(items => items.scents == `Floral`);
+        scents = items.filter(items => items.scents == `Floral`);
     } else if (document.getElementById("spicy").checked) {
-        itemsByscent = items.filter(items => items.scents == `Spicy`);
+        scents = items.filter(items => items.scents == `Spicy`);
     } else if (document.getElementById("warm").checked) {
-        itemsByscent = items.filter(items => items.scents == `Warm`);
+        scents = items.filter(items => items.scents == `Warm`);
     } else if (document.getElementById("woody").checked) {
-        itemsByscent = items.filter(items => items.scents == `Woody`);
+        scents = items.filter(items => items.scents == `Woody`);
     } else if (document.getElementById("earthy").checked) {
-        itemsByscent = items.filter(items => items.scents == `Earthy`);
+        scents = items.filter(items => items.scents == `Earthy`);
     } else if (document.getElementById("fresh").checked) {
-        itemsByscent = items.filter(items => items.scents == `Fresh`);
+        scents = items.filter(items => items.scents == `Fresh`);
     } else {
       return;
     }
-    renderItemsFromArray(itemsByScent);
+    console.log(scents, document.getElementById(`floral`))
+    renderItemsFromArray(scents);
 }
 
 // FUNCTIONS THAT BUILD OUR VIEW **************
@@ -386,8 +389,6 @@ const getItemsAsHtmlString = items => {
     }
 
     return `
-    <div class="container">
-    <main class="grid">
         <article>
         <img src="${items.image}" alt="">
         <div class="text">
@@ -400,16 +401,14 @@ const getItemsAsHtmlString = items => {
           <p> $${items.price}</p>
           <a class="btn btn-primary btn-block">Add to cart</a>
         </div>
-        </article>
-      </main>
-    </div> `;
+        </article>`;
 }
 
 const renderItemsFromArray = arr => {
     if (arr.length > 0) {
         document.getElementById('items').innerHTML = arr.map(getItemsAsHtmlString).join('\n');
     } else {
-        document.getElementById('items').innerHTML = 'Sorry, no matching results.'
+        document.getElementById('items').innerHTML = `Sorry, no matching results.`
     }
     document.getElementById('numResults').innerHTML = `(${arr.length} ${(arr.length == 1) ? 'result' : 'results'})`; // Display number of total results
 }
@@ -421,6 +420,6 @@ window.addEventListener('load', () => {
     document.getElementById('size-regular').addEventListener('click', itemsBySize);
     document.getElementById('size-mini').addEventListener('click', itemsBySize);
     document.getElementById('brand').addEventListener('click', itemsByBrand);
-    // document.getElementById('scents').addEventListener('click', itemsByScent);
+    document.getElementById('scents').addEventListener('click', itemsByScent);
     renderItemsFromArray(items);
 });

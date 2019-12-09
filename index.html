@@ -10,77 +10,85 @@
 
 <body>
   <header>
-    <h1> Beautify.me</h1>
-    <h2> Women Perfume <small id="numResults">(5 results)</small></h2>
-
-    <div id="filtersForm">
-      <form>
-        <input type="text" name="find" id="itemSearch">
-      </form>
-
-      <label for="categoryName">Category:
-        <select name="categoryName" id="categoryName">
-          <option value="all" selected>All Products</option>
-          <option value="toilette">Eau de Toilette Spray</option>
-          <option value="toilette-travel">Eau de Toilette Travel Spray</option>
-          <option value="spray">Spray</option>
-          <option value="perfum">Eau de Parfum Spray</option>
-          <option value="decanter">Eau de Parfum Decanter</option>
-        </select>
-      </label>
-
-      <select name="sort" id="sortOrder" class="sort">
-        <option value="" disabled selected>-- Sort By--</option>
-        <option value="bestSelling">Best Selling</option>
-        <option value="highRated">High Rated</option>
-        <option value="priceDesc">Price High to Low</option>
-        <option value="priceAsc">Price Low to High</option>
-        <option value="nameAsc">Name, A to Z</option>
-        <option value="nameDesc">Name, A to Z</option>
-      </select>
-
-      <div class="filterForm">
-        <form>
-          <label id="sortSize">Size</label> <br>
-          <input type="radio" id="size-regular" name="size"> Regular size perfume <br>
-          <input type="radio" id="size-mini" name="size"> Mini size perfume <br>
-        </form>
-        
-        <form id="brand">
-          <label>Brand</label> <br>
-          <input type="radio" name="brand" id="kat">KAT VON D <br>
-          <input type="radio" name="brand" id="vik">VIKTOR&ROLF <br>
-          <input type="radio" name="brand" id="yve">YVES SAINT LAURENT <br>
-          <input type="radio" name="brand" id="mai">MAISON MARGIELA <br>
-          <input type="radio" name="brand" id="jul">JULIETTE HAS A GUN <br>
-          <input type="radio" name="brand" id="ver">VERSACE <br>
-          <input type="radio" name="brand" id="mar">MARC JACOBS FRAGRANCES <br>
-          <input type="radio" name="brand" id="phi">PHILOSOPHY <br>
-          <input type="radio" name="brand" id="jo">JO MALONE LONDON <br>
-          <input type="radio" name="brand" id="tom">TOM FORD <br>
-          <input type="radio" name="brand" id="mug">MUGLER <br>
-          <input type="radio" name="brand" id="val">VALENTINO<br>
-        </form>
-
-        <form id="scents">
-          <label>Scents</label> <br>
-          <input type="radio" name="scent" id="floral">Floral <br>
-          <input type="radio" name="scent" id="spicy">Spicy <br>
-          <input type="radio" name="scent" id="warm">Warm <br>
-          <input type="radio" name="scent" id="woody">Woody <br>
-          <input type="radio" name="scent" id="earthy">Earthy <br>
-          <input type="radio" name="scent" id="fresh">Fresh <br>
-        </form>
-
-      </div>
+    <nav class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="banner">
+  
     </div>
-
   </header>
 
-  <div id=items>
-  <!-- <div class="container">
-  <main class="grid">
-      <article>
+  <div id="filtersForm">
+    <form class="searchbox">
+      <input type="text" name="find" id="itemSearch" placeholder="Search Brands or Items">
+    </form>
+    <label for="categoryName">Category:
+      <select name="categoryName" id="categoryName">
+        <option value="all" selected>All Products</option>
+        <option value="toilette">Eau de Toilette Spray</option>
+        <option value="toilette-travel">Eau de Toilette Travel Spray</option>
+        <option value="spray">Spray</option>
+        <option value="perfum">Eau de Parfum Spray</option>
+        <option value="decanter">Eau de Parfum Decanter</option>
+      </select>
+    </label>
+
+    <select name="sort" id="sortOrder" class="sort">
+      <option value="" disabled selected>-- Sort By--</option>
+      <option value="bestSelling">Best Selling</option>
+      <option value="highRated">High Rated</option>
+      <option value="priceDesc">Price High to Low</option>
+      <option value="priceAsc">Price Low to High</option>
+      <option value="nameAsc">Name, A to Z</option>
+      <option value="nameDesc">Name, A to Z</option>
+    </select>
+
+    <div class="filterForm">
+      <form>
+        <label id="sortSize">Size</label> <br>
+        <input type="radio" id="size-regular" name="size"> Regular size perfume <br>
+        <input type="radio" id="size-mini" name="size"> Mini size perfume <br>
+      </form>
+      
+      <div class="brand-menu">
+        <form id="brand">
+          <label>Brand</label> <br>
+          <input type="radio" name="brand" id="kat" class="brands kvd">
+          <input type="radio" name="brand" id="vik" class="brands vr">
+          <input type="radio" name="brand" id="yve" class="brands ysl">
+          <input type="radio" name="brand" id="mai" class="brands mm">
+          <input type="radio" name="brand" id="jul" class="brands jhag">
+          <input type="radio" name="brand" id="ver" class="brands versace">
+          <input type="radio" name="brand" id="mar" class="brands mj">
+          <input type="radio" name="brand" id="phi" class="brands philosophy">
+          <input type="radio" name="brand" id="jo" class="brands jml">
+          <input type="radio" name="brand" id="tom" class="brands tf">
+          <input type="radio" name="brand" id="mug" class="brands mugler">
+          <input type="radio" name="brand" id="val" class="brands valentino">
+        </form>
+      </div>
+
+      <form id="scents">
+        <label>Scents</label> <br>
+        <input type="radio" name="scent" id="floral">Floral <br>
+        <input type="radio" name="scent" id="spicy">Spicy <br>
+        <input type="radio" name="scent" id="warm">Warm <br>
+        <input type="radio" name="scent" id="woody">Woody <br>
+        <input type="radio" name="scent" id="earthy" class="earthy">Earthy <br>
+        <input type="radio" name="scent" id="fresh">Fresh <br>
+      </form>
+    </div>
+  </div>
+
+  <div class="numResults">
+    <small id="numResults">(5 results)</small>
+  </div>
+
+  <main class="grid" id="items">
+      <!-- <article>
         <img src="" alt="">
         <div class="text">
           <h3></h3>
@@ -88,9 +96,9 @@
           <p></p>
           <a class="btn btn-primary btn-block">Add to cart</a>
         </div>
-      </article>
+      </article> -->
     </main>
-  </div>  -->
+
 </div>
   <script src="js/index.js"></script>
 </body>
