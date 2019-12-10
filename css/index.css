@@ -11,6 +11,9 @@ header {
   margin: 0;
   padding-bottom: 5em;
   background-color: #252625;
+  position: relative;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
 }
 
 h2 {
@@ -64,7 +67,8 @@ h2 {
 }
 
 .navigation {
-  margin: 1em 0;
+  margin: 1em 0em;
+  text-align: center;
 }
 
 .navigation ul {
@@ -111,7 +115,6 @@ h1 {
 }
 
 .filters {
-  background-color: #F2F2F2;
   text-align: center;
 }
 
@@ -140,6 +143,10 @@ label {
   font-size: 1.4rem;
   font-family: 'Fredoka One', cursive;
   color: #D98236;
+}
+
+body {
+  background-color: #F2F2F2;
 }
 
 .grid {
