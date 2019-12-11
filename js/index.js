@@ -395,12 +395,12 @@ const getItemsAsHtmlString = items => {
         <img src="${items.image}" alt="">
         <div class="text">
           <h3> ${items.name} </h3> 
-          <p> ${soldout} ${callout} </p>
-          <p> ${items.brand}</p>
+          <p class="text-stock"> ${soldout} ${callout} </p>
+          <p class="text-brand"> ${items.brand}</p>
           <p> ${items.description}</p>
           <p> ${items.size} ml</p>
           <p> ${items.category}</p>
-          <p> $${items.price}</p>
+          <p class="text-price"> $${items.price}</p>
           <a class="btn btn-primary btn-block">Add to cart</a>
         </div>
         </article>`;
