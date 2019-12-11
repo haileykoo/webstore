@@ -290,35 +290,34 @@ const itemsByOrder = event => {
     } else if (event.target.value == 'nameDesc') {
         // Largest to smallest
         sorteditems = items.slice().sort((a, b) => b.name.localeCompare(a.name));
-    } else if (event.target.value == 'bestSelling') {
-        // Best Sellings
-        sorteditems = items.slice().sort((a, b) => a.price - b.price);
-    } else if (event.target.value == 'topRated') {
+    } else if (event.target.value == 'highRated') {
         // Highest customer reviews
-        sorteditems = items.slice().sort((a, b) => a.review - b.review);
+        sorteditems = items.slice().sort((a, b) => b.review - a.review);
     }else {
       return;
     }
     renderItemsFromArray(sorteditems);
 }
 
-/*
-const itemsBySize = event => {
-  
-    let size;
-  
-    if (document.getElementById("size-regular").checked) {
-        // items > 20ml
-        size = items.filter(items => items.size>20);
-    } else if (document.getElementById("size-mini").checked) {
-        // items < 20ml
-        size = items.filter(items => items.size<20);
-    } else {
-        return;
-    }
-    renderItemsFromArray(size);
-}
-*/
+// const itemByCategory = event => {
+//     console.log(event.target.value)
+
+//     let category;
+//     if (event.target.value == 'toilette') {
+//         categoty = items.filter(items => items.category == `Eau de Parfum Spray`);
+//     } else if (event.target.value == 'toilette-travel') {
+//         categoty = items.filter(items => items.category == `Eau de Toilette Travel Spray`);
+//     } else if (event.target.value == 'spray') {
+//         categoty = items.filter(items => items.category == `Spray`);
+//     } else if (event.target.value == 'perfum') {
+//         categoty = items.filter(items => items.category == `Eau de Parfum Spray`);
+//     } else if (event.target.value == 'decanter') {
+//         categoty = items.filter(items => items.category == `Eau de Parfum Decanter`);
+//     } else {
+//         return;
+//     }
+//     renderItemsFromArray(category);
+// }
 
 
 const itemsByBrand = event => {
@@ -380,14 +379,17 @@ const itemsByScent = event => {
 
 // FUNCTIONS THAT BUILD OUR VIEW **************
 const getItemsAsHtmlString = items => {
-    let callout = ``;
-    let soldout = ``;
-    if (items.quantity <= 0) {
-      callout = ``;
-      soldout = `soldout`;
-      register = ``;
-    } else if (items.quantity < 50 && items.quantity >0) {
-      callout = `<small class="callout urgent">Limited Stock</small>`;
+    let stars ;
+    if (items.review >= 5) {
+        stars = `⭐️⭐️⭐️⭐️⭐️`;
+    } else if (items.review <= 4 && items.review >3) {
+        stars = `⭐️⭐️⭐️⭐️`;
+    } else if (items.review <= 3 && items.review >2) {
+        stars = `⭐️⭐️⭐️`;
+    } else if (items.review <= 2 && items.review >1) {
+        stars = `⭐️⭐️`;
+    } else {
+        stars = `⭐️`;
     }
 
     return `
@@ -395,12 +397,12 @@ const getItemsAsHtmlString = items => {
         <img src="${items.image}" alt="">
         <div class="text">
           <h3> ${items.name} </h3> 
-          <p class="text-stock"> ${soldout} ${callout} </p>
           <p class="text-brand"> ${items.brand}</p>
           <p> ${items.description}</p>
           <p> ${items.size} ml</p>
           <p> ${items.category}</p>
           <p class="text-price"> $${items.price}</p>
+          <p class="text-stock"> ${stars} </p>
           <a class="btn btn-primary btn-block">Add to cart</a>
         </div>
         </article>`;
@@ -423,6 +425,7 @@ window.addEventListener('load', () => {
     // document.getElementById('size-mini').addEventListener('click', itemsBySize);
     document.getElementById('brand').addEventListener('click', itemsByBrand);
     document.getElementById('scents').addEventListener('click', itemsByScent);
+    // document.getElementById('categoryName').addEventListener('click', itemByCategory);
     renderItemsFromArray(items);
 });
 
