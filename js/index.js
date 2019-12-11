@@ -412,7 +412,7 @@ const renderItemsFromArray = arr => {
     } else {
         document.getElementById('items').innerHTML = `Sorry, no matching results.`
     }
-    document.getElementById('numResults').innerHTML = `(${arr.length} ${(arr.length == 1) ? 'result' : 'results'})`; // Display number of total results
+    document.getElementById('numResults').innerHTML = `We found ${arr.length} ${(arr.length == 1) ? 'item' : 'items'} for you!`; // Display number of total results
 }
 
 /************* EXECUTABLE *************/

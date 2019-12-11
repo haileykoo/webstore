@@ -11,10 +11,6 @@
 
 <body>
   <header>
-    <nav class="topnav">
-      <a class="active" href="#">SHOP</a>
-    </nav>
-
     <div class="dropdown">
       <button type="button" class="dropdown-toggle" id="dropdown-btn">
         <img src="/img/user.png" alt="">
@@ -30,11 +26,22 @@
       </nav>
     </div>
 
+    <h1>Looking for fragrance? <br>We’re here to help. </h1>
+    <h2>Our fragrances for men and women feature top brands plus exclusive and niche scents </h2>
     
+
     <form class="searchbox">
       <input type="text" name="find" id="itemSearch" placeholder="Search Brands or Items">
     </form>
     
+    <section class="svg">
+      <?xml version="1.0" encoding="utf-8"?>
+      <!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+      <svg class="curve" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 1366 352" style="enable-background:new 0 0 1366 352;" xml:space="preserve">
+      <path class="st0" d="M0,210c0,0,469-3,675,49s691-19,691-19v112H0V210z"/>
+      </svg>
+    </section>
 
   </header>
 
@@ -46,7 +53,7 @@
       <input type="radio" id="size-mini" name="size"> Mini size perfume <br>
     </form> -->
         
-    <div class="menu">
+    <div class="menu brand-filter">
       <form id="brand">
         <label>Brand</label> <br>
         <input type="radio" name="brand" id="kat" class="brands kvd">
@@ -64,7 +71,7 @@
       </form>
     </div>
 
-    <div class="menu">
+    <div class="menu scent-filter">
       <form id="scents">
         <label>Scents</label> <br>
         <input type="radio" name="scent" id="floral" class="scent floral">
@@ -76,16 +83,18 @@
       </form>
     </div>
 
-    <label for="categoryName">Category:
-      <select name="categoryName" id="categoryName" class="category">
-        <option value="all" selected>All Products</option>
-        <option value="toilette">Eau de Toilette Spray</option>
-        <option value="toilette-travel">Eau de Toilette Travel Spray</option>
-        <option value="spray">Spray</option>
-        <option value="perfum">Eau de Parfum Spray</option>
-        <option value="decanter">Eau de Parfum Decanter</option>
-      </select>
-    </label>
+    <div class="category-filter">
+      <label for="categoryName">Category:
+        <select name="categoryName" id="categoryName" class="category">
+          <option value="all" selected>All Products</option>
+          <option value="toilette">Eau de Toilette Spray</option>
+          <option value="toilette-travel">Eau de Toilette Travel Spray</option>
+          <option value="spray">Spray</option>
+          <option value="perfum">Eau de Parfum Spray</option>
+          <option value="decanter">Eau de Parfum Decanter</option>
+        </select>
+      </label>
+    </div>
 
     <div class="numResults">
       <small id="numResults">(5 results)</small>
@@ -102,7 +111,6 @@
     </select>
   </section>
   
-  <h2>Bestsellers > Fragrance </h2>
   <main class="grid" id="items">
     <!-- <article>
       <img src="" alt="">
@@ -146,7 +154,7 @@
       <div class="ft-main-item">
         <h2 class="ft-title">Stay Updated</h2>
         <p>Subscribe to our newsletter to get our latest news and promotions.</p>
-        <form>
+        <form class="email">
           <input type="email" name="email" placeholder="Enter email address">
           <input type="submit" value="Subscribe">
         </form>

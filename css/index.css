@@ -1,52 +1,56 @@
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
 
+/* Global */
 html,body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #F2F2F2;
+  font-family: 'roboto';
 }
 
+/* Header */
 header {
   margin: 0;
-  padding-bottom: 5em;
   background-color: #252625;
+  background-size: cover;
+}
+
+/* Curved Header */
+.svg {
   position: relative;
-  border-bottom-left-radius: 50% 20%;
-  border-bottom-right-radius: 50% 20%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 30vh;
+}
+
+.curve {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.curve path {
+  fill: #F2F2F2;
+}
+
+/* Header Font */
+h1 {
+  font-family: 'Courgette';
+  font-size: 3em;
+  text-align: center;
+  color: #D98236;
 }
 
 h2 {
   font-size: 2rem;
-  font-family: 'Fredoka One', cursive;
   text-align: center;
-  color: #252625;
+  color: #F2F2F2;
 }
 
-.topnav {
-  margin: 0;
-  padding: 0;
-}
-
-.topnav a {
-  float: left;
-  color:white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #f2f2f2;
-  color: #D98236;
-}
-
-.topnav a.active {
-  background-color: #D98236;
-  color: white;
-}
-
+/* Drop-down Menu */
 .dropdown {
   padding: 0 1em;
   overflow: hidden;
@@ -95,32 +99,10 @@ h2 {
   display: block;
 }
 
-/* .banner {
-  background: url(/img/banner1.jpg) no-repeat center center fixed; 
-  background-size: cover; 
-  height: 100%;
-  width: 100%;
-  height:100vh;    
-} */
-
-h1 {
-  color: white;
-  font-size: 5em;
-  display: inline-block;
-}
-
+/* Search Bar */
 .searchbox {
-  margin-top: 1em;
+  margin-top: 5em;
   text-align: center;
-}
-
-.filters {
-  text-align: center;
-}
-
-.menu {
-  overflow: auto;
-  white-space: nowrap;
 }
 
 input[type=text] {
@@ -139,86 +121,44 @@ input[type=text]:focus {
   width: 100%;
 }
 
+/* Filter */
+.filters {
+  text-align: center;
+  position: relative;
+}
+
+.menu {
+  overflow: auto;
+  white-space: nowrap;
+}
+
 label {
   font-size: 1.4rem;
   font-family: 'Fredoka One', cursive;
   color: #D98236;
 }
 
-body {
-  background-color: #F2F2F2;
-}
-
-.grid {
-  margin: 2em 12em;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-gap: 20px;
-  align-items: stretch;
-  justify-content: center;
-}
-
-.grid > article {
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
-}
-
-.grid > article img {
-  max-width: 100%;
-}
-
-.grid .text {
-  padding: 20px;
-  text-align: center;
-}
-
-.grid .text h3 {
-  font-size: 1.4rem;
-  font-family: 'Fredoka One', cursive;
-  color: #D98236;
-}
-
-.grid .text p {
-  font-size: 0.9rem;
-}
-
-.grid .text p a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #555;
-  font-family: 'Courgette', cursive;
-}
-
-form {
-  font-size: 0.6em;
-}
-
-.filters {
-  position: relative;
-}
-
 .sort {
   position: absolute;
-  top: 40em;
+  top: 33.8em;
   right: 0;
+  margin-right: 19em;
 }
 
-.btn {
-  padding: 4px 14px;
-  background-color: #D98236;
-  color: white;
-  border-radius: 4px;
-  text-transform: case;
-  float: center;
-  margin: 5px 0;
-  font-weight: bold;
-  font-size: 0.9rem;
-  cursor: pointer;
-  font-family: 'Courgette', cursive;
+.brand-filter, .scent-filter, .category-filter {
+  margin-bottom: 2em;
 }
 
-.btn:hover {
-  color: rgb(41, 45, 56);
+.category-filter {
+  text-align: left;
+  margin: 2em 13em;
+}
+
+.numResults {
+  font-size: 2em;
+  font-family: 'Courgette';
+  color: #252625;
+  margin: 2em;
 }
 
 .brands {
@@ -381,6 +321,69 @@ form {
   border-radius: 50%;
 }
 
+/* Products */
+
+.grid {
+  margin: 2em 12em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  justify-content: center;
+  background-color: white;
+}
+
+.grid > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.grid > article img {
+  max-width: 100%;
+}
+
+.grid .text {
+  padding: 20px;
+  text-align: center;
+}
+
+.grid .text h3 {
+  font-size: 1.4rem;
+  font-family: 'Fredoka One', cursive;
+  color: #D98236;
+}
+
+.grid .text p {
+  font-size: 0.9rem;
+}
+
+.grid .text p a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #555;
+  font-family: 'Courgette', cursive;
+}
+
+/* Add to Cart btn */
+.btn {
+  padding: 4px 14px;
+  background-color: #D98236;
+  color: white;
+  border-radius: 4px;
+  text-transform: case;
+  float: center;
+  margin: 5px 0;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: 'Courgette', cursive;
+}
+
+.btn:hover {
+  color: rgb(41, 45, 56);
+}
+
+/* Media Query */
 @media only screen and (max-width: 800px) {
   .brands {
     width: 8em;
@@ -392,6 +395,7 @@ form {
   }
 }
 
+/* Footer */
 footer {
   background-color: #252625;
   color: white;
@@ -401,15 +405,22 @@ footer a {
   text-decoration: none;
   color: white;
 }
-a:hover {
+
+footer a:hover {
   text-decoration: underline;
 }
+
+footer li {
+  list-style: none;
+}
+
 .ft-title {
   color: #fff;
-  font-family: "Merriweather", serif;
+  font-family: "Courgette", serif;
   font-size: 1.375rem;
   padding-bottom: 0.625rem;
 }
+
 /* Sticks footer to bottom */
 body {
   display: flex;
@@ -419,6 +430,7 @@ body {
 .container {
   flex: 1;
 }
+
 /* Footer main */
 .ft-main {
   padding: 1.25rem 1.875rem;
@@ -441,6 +453,10 @@ body {
 }
 
 /* Footer main | Newsletter form */
+.email {
+  text-align: center;
+}
+
 input[type="email"] {
   border: 0;
   padding: 0.625rem;
