@@ -269,7 +269,6 @@ const items = [
 //   }
 
 const loadItemByNameandBrand = event => {
-
     const whatToSearch = document.getElementById('itemSearch').value;
     console.log(whatToSearch)
     const cleanVersion = whatToSearch.trim().toLowerCase();
@@ -383,6 +382,10 @@ const itemsByScent = event => {
 }
 
 // FUNCTIONS THAT BUILD OUR VIEW **************
+/*  Function: To show result items
+    Parameters: items varname:Type
+    Return: inner HTML
+    Description: Adding filtered items in a HTML document      */
 const getItemsAsHtmlString = items => {
     let stars ;
     let shoppingCart = `<button type="button" class="btn" id="cartBtn" data-itemid="${items.id}"> Add to Cart </button>`;
@@ -424,6 +427,16 @@ const renderItemsFromArray = arr => {
     document.getElementById('numResults').innerHTML = `We found ${arr.length} ${(arr.length == 1) ? 'item' : 'items'} for you!`; // Display number of total results
 }
 
+/****** DROPDOWN MENU */
+/*  Function: Open and Close dropdown menu
+    Parameters:  varname:
+    Return: list items
+    Description: a function to open a dropdown menu in header      */
+document.getElementById('dropdown-btn').addEventListener ('click', event => 
+{
+    document.getElementById('inside-menu').classList.toggle('open');
+});
+
 /************* EXECUTABLE *************/
 window.addEventListener('load', () => {
     document.getElementById('itemSearch').addEventListener('input', loadItemByNameandBrand);
@@ -437,12 +450,6 @@ window.addEventListener('load', () => {
 });
 
 
-
-/****** DROPDOWN MENU */
-document.getElementById('dropdown-btn').addEventListener ('click', event => 
-{
-    document.getElementById('inside-menu').classList.toggle('open');
-});
 
 
 // Shopping Cart
