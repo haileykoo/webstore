@@ -1,7 +1,7 @@
 /******* GLOABL VARIABLES/DATA ********/
-const shoppingCart = [
-    {itemsid:101, qty:1}
-];
+// const shoppingCart = [
+//     {itemsid:101, qty:1}
+// ];
 
 const items = [
     { //0
@@ -249,25 +249,24 @@ const items = [
 
 
 /************* FUNCTIONS *************/
-const addItemToCart = itemid => {
-  
-    const cartItem = shoppingCart.find(item => item.itemid == itemid);
-  
-    if (cartItem) {  // if a cartItem was found
-      cartItem.qty++;
-    } else {
-      shoppingCart.push({itemid: itemid, qty: 1});
-    }
-}
+// const addItemToCart = itemid => {
+//     const cartItem = shoppingCart.find(item => item.id == itemid);
+//     if (cartItem) {  // if a cartItem was found
+//       cartItem.qty++;
+//     } else {
+//       shoppingCart.push({itemid: itemid, qty: 1});
+//     }
+// }
 
 // EVENT HANDLER FUNCTIONS **************
-const handleClickOfCart = event => {
-    if (!event.target.matches('button.btn')) {
-      return;
-    }
-    const itemid = parseInt(event.target.dataset.itemid);
-    addItemToCart(itemid);
-  }
+// const handleClickOfCart = event => {
+//     alert(event.target.btn)
+//     if (!event.target.matches('button.btn')) {
+//       return;
+//     }
+//     const itemid = parseInt(event.target.dataset.itemid);
+//     addItemToCart(itemid);
+//   }
 
 const loadItemByNameandBrand = event => {
 
@@ -386,7 +385,7 @@ const itemsByScent = event => {
 // FUNCTIONS THAT BUILD OUR VIEW **************
 const getItemsAsHtmlString = items => {
     let stars ;
-    let shoppingCart = `<button type="button" class="btn" data-itemid="${items.id}"> Add to Cart </button>`;
+    let shoppingCart = `<button type="button" class="btn" id="cartBtn" data-itemid="${items.id}"> Add to Cart </button>`;
     let cartNostock = `<button type="button" class="btn-outofstock" data-itemid="${items.id}"> Add to Cart </button>`;
     if (items.review == 5) {
         stars = `⭐️⭐️⭐️⭐️⭐️`;
@@ -443,4 +442,48 @@ window.addEventListener('load', () => {
 document.getElementById('dropdown-btn').addEventListener ('click', event => 
 {
     document.getElementById('inside-menu').classList.toggle('open');
+});
+
+
+// Shopping Cart
+const shoppingCart = [
+    {itemid:101, qty:1}
+];
+
+    /************* FUNCTIONS *************/
+// const addItemToCart = itemid => {
+//     const cartItem = shoppingCart.find(item => item.id == itemid);
+//     if (cartItem) {  // if a cartItem was found
+//       cartItem.qty++;
+//     } else {
+//       shoppingCart.push({itemid: itemid, qty: 1});
+//     }
+// }
+
+// EVENT HANDLER FUNCTIONS **************
+// const handleClickOfCart = event => {
+//     alert(event.target.btn)
+//     if (!event.target.matches('button.btn')) {
+//       return;
+//     }
+//     const itemid = parseInt(event.target.dataset.itemid);
+//     addItemToCart(itemid);
+//   }
+// const shoppingCart = [
+//         {itemsid:101, qty:1}
+//     ];
+
+// let addToCartBtn = document.getElementById(`cartBtn`);
+
+function addItemToCart () {
+
+    var html = '';
+    var cartNum = document.getElementById("cartNum");
+        
+    return cartNum.innerHTML = `added`;
+}
+
+// addToCartBtn.addEventListener ('click', add);
+window.addEventListener('load', () => {
+    document.getElementById('cartBtn').addEventListener('click', addItemToCart);
 });
