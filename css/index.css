@@ -26,6 +26,10 @@ header {
   background-attachment: fixed;
 }
 
+.cart-num {
+  color: white;
+}
+
 /* Header Font */
 h1 {
   font-family: 'Courgette';

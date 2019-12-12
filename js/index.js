@@ -260,15 +260,13 @@ const addItemToCart = itemid => {
     }
 }
 
-
-
 // EVENT HANDLER FUNCTIONS **************
 const handleClickOfCart = event => {
-    if (!event.target.matches('button.course-register')) {
+    if (!event.target.matches('button.btn')) {
       return;
     }
-    const courseid = parseInt(event.target.dataset.courseid);
-    addItemToCart(courseid);
+    const itemid = parseInt(event.target.dataset.itemid);
+    addItemToCart(itemid);
   }
 
 const loadItemByNameandBrand = event => {
@@ -388,6 +386,8 @@ const itemsByScent = event => {
 // FUNCTIONS THAT BUILD OUR VIEW **************
 const getItemsAsHtmlString = items => {
     let stars ;
+    let shoppingCart = `<button type="button" class="btn" data-itemid="${items.id}"> Add to Cart </button>`;
+    let cartNostock = `<button type="button" class="btn-outofstock" data-itemid="${items.id}"> Add to Cart </button>`;
     if (items.review == 5) {
         stars = `⭐️⭐️⭐️⭐️⭐️`;
     } else if (items.review == 4) {
@@ -411,7 +411,7 @@ const getItemsAsHtmlString = items => {
           <p> ${items.category}</p>
           <p class="text-price"> $${items.price}</p>
           <p class="text-stock"> ${stars} </p>
-          <a class="btn btn-primary btn-block">Add to cart</a>
+          ${shoppingCart}
         </div>
         </article>`;
 }
