@@ -15,7 +15,7 @@ const items = [
         scents: `Floral`,
         size: 100,
         brand: `KAT VON D`,
-        review: 5
+        review: 2
     }, { //1
         id: 102,
         name: `Flowerbomb`,
@@ -39,7 +39,7 @@ const items = [
         scents: `Spicy`,
         size: 90,
         brand: `YVES SAINT LAURENT`,
-        review: 3.5
+        review: 3
     }, { //3
         id: 104,
         name: `REPLICA’ By The Fireplace`,
@@ -51,7 +51,7 @@ const items = [
         scents: `Warm`,
         size: 100,
         brand: `MAISON MARGIELA`,
-        review: 4.2
+        review: 4
     }, { //4
         id: 105,
         name: `Not A Perfume`,
@@ -63,7 +63,7 @@ const items = [
         scents: `Woody`,
         size: 100,
         brand: `JULIETTE HAS A GUN`,
-        review: 4.9
+        review: 4
     }, { //5
         id: 106,
         name: `Bright Crystal`,
@@ -75,7 +75,7 @@ const items = [
         scents: `Floral`,
         size: 90,
         brand: `VERSACE`,
-        review: 3.2
+        review: 3
     }, { //6
         id: 107,
         name: `Daisy`,
@@ -87,7 +87,7 @@ const items = [
         scents: `Floral`,
         size: 50,
         brand: `MARC JACOBS FRAGRANCES`,
-        review: 3.8
+        review: 3
     }, { //8
         id: 109,
         name: `REPLICA’ By The Fireplace Travel Spray`,
@@ -99,7 +99,7 @@ const items = [
         scents: `Warm`,
         size: 10,
         brand: `MAISON MARGIELA`,
-        review: 2.2
+        review: 2
     }, { //9
         id: 110,
         name: `REPLICA’ By The Fireplace Travel Spray`,
@@ -123,7 +123,7 @@ const items = [
         scents: `Floral`,
         size: 60,
         brand: `PHILOSOPHY`,
-        review: 4.4
+        review: 4
     }, { //11
         id: 112,
         name: `Flowerbomb Nectar`,
@@ -135,7 +135,7 @@ const items = [
         scents: `Warm`,
         size: 50,
         brand: `VIKTOR&ROLF`,
-        review: 2.9
+        review: 2
     }, { //12
         id: 113,
         name: `REPLICA Under the Lemon Trees Eau de Toilette`,
@@ -159,7 +159,7 @@ const items = [
         scents: `Floral`,
         size: 60,
         brand: `PHILOSOPHY`,
-        review: 3.3
+        review: 3
     }, { //14
         id: 115,
         name: `Blackberry & Bay Cologne`,
@@ -171,7 +171,7 @@ const items = [
         scents: `Fresh`,
         size: 100,
         brand: `JO MALONE LONDON`,
-        review: 4.5
+        review: 4
     }, { //15
         id: 116,
         name: `Red Roses Cologne`,
@@ -183,7 +183,7 @@ const items = [
         scents: `Floral`,
         size: 100,
         brand: `JO MALONE LONDON`,
-        review: 1.8
+        review: 1
     }, { //16
         id: 117,
         name: `Oud Wood Travel Spray`,
@@ -195,7 +195,7 @@ const items = [
         scents: `Earthy`,
         size: 10,
         brand: `TOM FORD`,
-        review: 4.1
+        review: 4
     }, { //17
         id: 118,
         name: `Alien Travel Spray`,
@@ -207,7 +207,7 @@ const items = [
         scents: `Floral`,
         size: 10,
         brand: `MUGLER`,
-        review: 3.2
+        review: 3
     }, { //18
         id: 119,
         name: `Lost Cherry`,
@@ -219,7 +219,7 @@ const items = [
         scents: `Warm`,
         size: 100,
         brand: `TOM FORD`,
-        review: 2.3
+        review: 2
     }, { //19
         id: 120,
         name: `Vert d’Encens`,
@@ -231,7 +231,7 @@ const items = [
         scents: `Spicy`,
         size: 250,
         brand: `TOM FORD`,
-        review: 4.3
+        review: 4
     }, { //20
         id: 121,
         name: `Donna Born In Roma Eau de Parfum`,
@@ -243,26 +243,34 @@ const items = [
         scents: `Floral`,
         size: 10,
         brand: `VALENTINO`,
-        review: 3.1
+        review: 3
     }
 ];
 
 
 /************* FUNCTIONS *************/
-const addItemToCart = courseid => {
+const addItemToCart = itemid => {
   
-    const cartItem = shoppingCart.find(item => item.courseid == courseid);
+    const cartItem = shoppingCart.find(item => item.itemid == itemid);
   
     if (cartItem) {  // if a cartItem was found
       cartItem.qty++;
     } else {
-      shoppingCart.push({courseid: courseid, qty: 1});
+      shoppingCart.push({itemid: itemid, qty: 1});
     }
 }
 
 
 
 // EVENT HANDLER FUNCTIONS **************
+const handleClickOfCart = event => {
+    if (!event.target.matches('button.course-register')) {
+      return;
+    }
+    const courseid = parseInt(event.target.dataset.courseid);
+    addItemToCart(courseid);
+  }
+
 const loadItemByNameandBrand = event => {
 
     const whatToSearch = document.getElementById('itemSearch').value;
@@ -380,13 +388,13 @@ const itemsByScent = event => {
 // FUNCTIONS THAT BUILD OUR VIEW **************
 const getItemsAsHtmlString = items => {
     let stars ;
-    if (items.review >= 5) {
+    if (items.review == 5) {
         stars = `⭐️⭐️⭐️⭐️⭐️`;
-    } else if (items.review <= 4 && items.review >3) {
+    } else if (items.review == 4) {
         stars = `⭐️⭐️⭐️⭐️`;
-    } else if (items.review <= 3 && items.review >2) {
+    } else if (items.review == 3) {
         stars = `⭐️⭐️⭐️`;
-    } else if (items.review <= 2 && items.review >1) {
+    } else if (items.review == 2) {
         stars = `⭐️⭐️`;
     } else {
         stars = `⭐️`;

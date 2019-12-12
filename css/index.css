@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
 
-/* Global */
+/* Basic Setup */
 html,body {
-  height: 100%;
   margin: 0;
   padding: 0;
   background-color: #F2F2F2;
@@ -11,29 +10,20 @@ html,body {
 }
 
 /* Header */
+.alram {
+  background-color: #D98236;
+  color: white;
+  text-align: center;
+}
+
 header {
-  margin: 0;
-  background-color: #252625;
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/nathan-fertig-scbYOgVyb8Q-unsplash.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/nathan-fertig-scbYOgVyb8Q-unsplash.jpg);
   background-size: cover;
-}
-
-/* Curved Header */
-.svg {
-  position: relative;
-  margin: 0;
-  padding: 0;
+  background-position: center;
   width: 100%;
-  height: 30vh;
-}
-
-.curve {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-.curve path {
-  fill: #F2F2F2;
+  height: 100vh;
+  background-attachment: fixed;
 }
 
 /* Header Font */
@@ -54,25 +44,21 @@ h2 {
 .dropdown {
   padding: 0 1em;
   overflow: hidden;
-  margin: 1em 0;
+  margin: 0 auto;
+  padding: 1em;
 }
 
 .dropdown-toggle {
-  color: #D98236;
   background: none;
   border: none;
-  display: block;
   cursor: pointer;
   margin-left: auto;
-}
-
-.meterial-icons {
-  font-size: 2em;
+  float: right;
 }
 
 .navigation {
   margin: 1em 0em;
-  text-align: center;
+  text-align: right;
 }
 
 .navigation ul {
@@ -123,6 +109,7 @@ input[type=text]:focus {
 
 /* Filter */
 .filters {
+  margin: 2em 0;
   text-align: center;
   position: relative;
 }
@@ -145,13 +132,9 @@ label {
   margin-right: 19em;
 }
 
-.brand-filter, .scent-filter, .category-filter {
+.brand-filter, .scent-filter {
   margin-bottom: 2em;
-}
-
-.category-filter {
-  text-align: left;
-  margin: 2em 13em;
+  background-color: #f4f4f4;
 }
 
 .numResults {
@@ -361,8 +344,6 @@ label {
   font-size: 1.5em;
   font-family: 'Courgette';
 }
-
-
 
 /* Add to Cart btn */
 .btn {
