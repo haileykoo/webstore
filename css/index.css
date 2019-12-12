@@ -17,8 +17,8 @@ html,body {
 }
 
 header {
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/nathan-fertig-scbYOgVyb8Q-unsplash.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/nathan-fertig-scbYOgVyb8Q-unsplash.jpg);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/nathan-fertig-scbYOgVyb8Q-unsplash.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/nathan-fertig-scbYOgVyb8Q-unsplash.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
